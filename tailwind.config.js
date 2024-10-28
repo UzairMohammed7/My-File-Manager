@@ -15,6 +15,7 @@ export default {
       'darkpurple': '#454f84',
       'blue': '#0b69ff',
       'gray': '#818589 ',
+      'lightgray': '#ECECEC ',
       'yellow': '#FFFF00',
       'red': '#FF0000',
     }

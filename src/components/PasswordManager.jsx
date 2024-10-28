@@ -1,5 +1,7 @@
 import { Component } from "react";
 import { v4 } from "uuid";
+import Navbar from './Navbar';
+
 import "./Password.css";
 
 const colorsForBackgroundColors = [
@@ -117,6 +119,8 @@ class PasswordManager extends Component {
     }
 
     return (
+      <>
+      <Navbar />
       <div className="app-container">
         <img
           className="app-logo"
@@ -276,166 +280,8 @@ class PasswordManager extends Component {
           )}
         </div>
       </div>
-      // <div className="flex flex-col items-center bg-gray-50 p-6 min-h-screen">
-      //   <img
-      //     className="w-40 mb-6"
-      //     src="https://assets.ccbp.in/frontend/react-js/password-manager-logo-img.png"
-      //     alt="app logo"
-      //   />
-      //   <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
-      //     <form className="space-y-4" onSubmit={this.onClickAddPassword}>
-      //       <h1 className="text-2xl font-bold text-center">Add New Password</h1>
-      //       <div className="flex items-center border-b border-gray-300 py-2">
-      //         <img
-      //           className="w-6 h-6 mr-2"
-      //           src="https://assets.ccbp.in/frontend/react-js/password-manager-website-img.png"
-      //           alt="website"
-      //         />
-      //         <input
-      //           type="text"
-      //           placeholder="Enter Website"
-      //           value={websiteInput}
-      //           className="flex-1 py-2 px-1 focus:outline-none"
-      //           onChange={this.onChangeWebsite}
-      //         />
-      //       </div>
-      //       <div className="flex items-center border-b border-gray-300 py-2">
-      //         <img
-      //           className="w-6 h-6 mr-2"
-      //           src="https://assets.ccbp.in/frontend/react-js/password-manager-username-img.png"
-      //           alt="username"
-      //         />
-      //         <input
-      //           type="text"
-      //           placeholder="Enter Username"
-      //           value={usernameInput}
-      //           className="flex-1 py-2 px-1 focus:outline-none"
-      //           onChange={this.onChangeUsername}
-      //         />
-      //       </div>
-      //       <div className="flex items-center border-b border-gray-300 py-2">
-      //         <img
-      //           className="w-6 h-6 mr-2"
-      //           src="https://assets.ccbp.in/frontend/react-js/password-manager-password-img.png"
-      //           alt="password"
-      //         />
-      //         <input
-      //           type="password"
-      //           placeholder="Enter Password"
-      //           value={passwordInput}
-      //           className="flex-1 py-2 px-1 focus:outline-none"
-      //           onChange={this.onChangePassword}
-      //         />
-      //       </div>
-      //       <div>
-      //         <button
-      //           className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-200"
-      //           type="submit"
-      //         >
-      //           Add
-      //         </button>
-      //       </div>
-      //     </form>
-      //     <img
-      //       src="https://assets.ccbp.in/frontend/react-js/password-manager-sm-img.png"
-      //       alt="password manager"
-      //       className="w-full mt-6"
-      //     />
-      //   </div>
-
-      //   <div className="mt-8 w-full max-w-md">
-      //     <div className="flex justify-between items-center mb-4">
-      //       <div className="flex flex-col">
-      //         <h1 className="text-xl font-bold">Your Passwords</h1>
-      //         <p className="text-gray-500">{newList.length}</p>
-      //       </div>
-      //       <div className="flex items-center border border-gray-300 rounded p-1">
-      //         <img
-      //           src="https://assets.ccbp.in/frontend/react-js/password-manager-search-img.png"
-      //           alt="search"
-      //           className="w-5 h-5 mr-2"
-      //         />
-      //         <input
-      //           type="search"
-      //           placeholder="search"
-      //           className="focus:outline-none"
-      //           onChange={this.onChangeSearchInput}
-      //         />
-      //       </div>
-      //     </div>
-      //     <hr className="mb-4" />
-      //     <div className="flex items-center mb-4">
-      //       <input
-      //         className="mr-2"
-      //         type="checkbox"
-      //         id="checkPassword"
-      //         onChange={this.showPassword}
-      //         value={searchInput}
-      //       />
-      //       <label
-      //         htmlFor="checkPassword"
-      //         className="cursor-pointer text-gray-700"
-      //       >
-      //         Show passwords
-      //       </label>
-      //     </div>
-      //     {!isPasswordsPresent && (
-      //       <div className="flex flex-col items-center">
-      //         <img
-      //           src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-      //           alt="no passwords"
-      //           className="w-20 mb-2"
-      //         />
-      //         <p className="text-gray-500">No Passwords</p>
-      //       </div>
-      //     )}
-      //     {isPasswordsPresent && (
-      //       <ul className="space-y-4">
-      //         {newList.map((eachValue) => (
-      //           <li
-      //             id={eachValue.id}
-      //             key={eachValue.id}
-      //             className="bg-white rounded-lg p-4 shadow flex justify-between items-center"
-      //           >
-      //             <div className="flex items-center">
-      //               <p
-      //                 className={`w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full text-lg font-bold ${eachValue.classAndValue}`}
-      //               >
-      //                 {eachValue.initialValue}
-      //               </p>
-      //               <div className="ml-4">
-      //                 <p className="text-gray-700">{eachValue.websiteName}</p>
-      //                 <p className="text-gray-500">{eachValue.userName}</p>
-      //                 {!isShowPassword && (
-      //                   <img
-      //                     src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
-      //                     className="w-8"
-      //                     alt="stars"
-      //                   />
-      //                 )}
-      //                 {isShowPassword && (
-      //                   <p className="text-gray-700">{eachValue.password}</p>
-      //                 )}
-      //               </div>
-      //             </div>
-      //             <button
-      //               onClick={() => this.deleteUserDetails(eachValue.id)}
-      //               className="bg-transparent border-none cursor-pointer"
-      //               type="button"
-      //               data-testid="delete"
-      //             >
-      //               <img
-      //                 src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
-      //                 alt="delete"
-      //                 className="w-6 h-6"
-      //               />
-      //             </button>
-      //           </li>
-      //         ))}
-      //       </ul>
-      //     )}
-      //   </div>
-      // </div>
+      </>
+      
     );
   }
 }
