@@ -3,7 +3,7 @@ import Home from './components/Home';
 import PasswordManager from './components/PasswordManager';
 import Todos from './components/Todos';
 import Notes from './components/Notes';
-import Contacts from './components/contacts';
+import Contacts from './components/Contacts';
 import {motion} from 'framer-motion'
 const App = () => {
   return (
