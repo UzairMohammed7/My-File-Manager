@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="pt-5">
-      <h1 className="text-darkpurple font-bold text-center text-2xl">Save Your Files</h1>
+      <h1 className="text-darkpurple font-bold text-center text-2xl">Your Files Manager</h1>
       <motion.div className="container gap-8 mx-auto py-14 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4">
         {/* First Layer - Password Manager */}
         <motion.div
